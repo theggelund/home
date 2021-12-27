@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    volumes:
+      - /opt/homeassistant/config:/config 
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - 80:8123
+
+#    network_mode: host
