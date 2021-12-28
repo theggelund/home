@@ -17,3 +17,9 @@ services:
       - "/dev/ttyAMA0:/dev/ttyAMA0"
     ports:
       - 81:8091
+    volumes:
+      - /opt/zwave2mqtt:/usr/src/app/store
+    stop_signal: SIGINT
+    tty: true
+    environment:
+      - ZWAVEJS_EXTERNAL_CONFIG=/usr/src/app/store/.config-db
