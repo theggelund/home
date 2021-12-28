@@ -10,5 +10,7 @@ services:
     privileged: true
     ports:
       - 80:8123
+    devices:
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
 
 #    network_mode: host
