@@ -10,7 +10,8 @@ services:
     privileged: true
     ports:
       - 80:8123
+
+  zwavejs2mqtt:
+    image: zwavejs/zwavejs2mqtt:latest 
     devices:
       - "/dev/ttyAMA0:/dev/ttyAMA0"
-
-#    network_mode: host
