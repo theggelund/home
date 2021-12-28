@@ -15,3 +15,5 @@ services:
     image: zwavejs/zwavejs2mqtt:latest 
     devices:
       - "/dev/ttyAMA0:/dev/ttyAMA0"
+    ports:
+      - 81:8091
